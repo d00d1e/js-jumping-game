@@ -2,3 +2,70 @@
   margin: 0;
   padding: 0;
 }
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  height: 99.9vh;
+  /* overscroll-behavior: none; */
+}
+
+#game {
+  width: 50rem;
+  height: 20rem;
+  border: 1px solid black;
+  margin: auto;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#character {
+  width: 2rem;
+  height: 5rem;
+  background-color: gray;
+  position: relative;
+  top: 15rem;
+}
+
+#block {
+  width: 2rem;
+  height: 2rem;
+  background-color: lightgreen;
+  position: relative;
+  top: 13rem;
+  left: 48rem;
+  animation: move 1.6s linear infinite;
+}
+
+.animate {
+  animation: jump 500ms;
+}
+
+@keyframes move {
+  0% {
+    left: 48rem;
+  }
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes jump {
+  0% {
+    top: 15rem;
+  }
+  30% {
+    top: 10rem;
+  }
+  70% {
+    top: 10rem;
+  }
+  100% {
+    top: 12rem;
+  }
+}
